@@ -3,11 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cafe Menu</title>
+    <title>플디 플디</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f9f9f9; }
+        h1 { text-align: center; color: #333; }
+        .menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .menu-item { width: 200px; text-align: center; }
+        .menu-item img { width: 100%; height: auto; border-radius: 8px; }
+        .menu-item h3 { margin: 10px 0 5px; font-size: 1.2em; color: #555; }
+        .menu-item p { margin: 0; color: #777; font-size: 0.9em; }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Cafe</h1>
-    <p>Cake1 - 13,000₩</p>
-    <p>Cake2 - 12,000₩</p>
+
+    <h1>홀 케이크</h1>
+    <div class="menu" id="menu-container"></div>
+
+    <script>
+        // 이미지 경로와 메뉴 설명을 변수처럼 관리하는 배열
+        const menuItems = [
+            {
+                name: "클딸 미니",
+                image: "menu_images/classic_strawberry.png",  // 변경된 경로
+                description: "진짜 맛있음 먹다 기절😵",
+                price: "36,000₩"
+            },
+            {
+                name: "탈기 미니",
+                image: "menu_images/ttalgi.png",  // 변경된 경로
+                description: "크리스마스 단골 상품🍓",
+                price: "37,000₩"
+            }
+        ];
+
+        // HTML 요소에 메뉴 항목 추가
+        const menuContainer = document.getElementById("menu-container");
+
+        menuItems.forEach(item => {
+            const menuItem = document.createElement("div");
+            menuItem.classList.add("menu-item");
+
+            menuItem.innerHTML = `
+                <img src="${item.image}" alt="${item.name} 이미지">
+                <h3>${item.name}</h3>
+                <p>${item.description} - ${item.price}</p>
+            `;
+
+            menuContainer.appendChild(menuItem);
+        });
+    </script>
+
 </body>
 </html>
