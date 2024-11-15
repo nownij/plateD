@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>플디 플디</title>
+    <title>카페 메뉴</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f9f9f9; }
         h1 { text-align: center; color: #333; }
@@ -12,10 +12,28 @@
         .menu-item img { width: 100%; height: auto; border-radius: 8px; }
         .menu-item h3 { margin: 10px 0 5px; font-size: 1.2em; color: #555; }
         .menu-item p { margin: 0; color: #777; font-size: 0.9em; }
+
+        /* 관리자 페이지로 이동하는 버튼 */
+        .admin-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
 
+    <!-- 우측 상단의 관리자 페이지 버튼 -->
+    <a href="admin.html" class="admin-button">관리자 페이지</a>
+
+    <!-- 메인 페이지 콘텐츠 -->
     <h1>홀 케이크</h1>
     <div class="menu" id="menu-container"></div>
 
@@ -24,22 +42,16 @@
         const menuItems = [
             {
                 name: "클딸 미니",
-                image: "menu_images/classic_strawberry.png",  // 변경된 경로
+                image: "menu_images/classic_strawberry.png",
                 description: "진짜 맛있음 먹다 기절😵",
                 price: "36,000₩"
             },
             {
                 name: "탈기 미니",
-                image: "menu_images/ttalgi.png",  // 변경된 경로
+                image: "menu_images/ttalgi.png",
                 description: "크리스마스 단골 상품🍓",
                 price: "37,000₩"
             }
-            // {
-            //     name:"틈새 께옹이",
-            //     image: "menu_images/g_ong.png",
-            //     description: "FrenkieGong의 분홍색 여우",
-            //     price: "120,000₩"
-            // }
         ];
 
         // HTML 요소에 메뉴 항목 추가

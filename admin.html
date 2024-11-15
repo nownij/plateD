@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 페이지</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f9f9f9; }
+        h2 { text-align: center; color: #333; }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .add-menu-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 메인 페이지로 돌아가는 버튼 -->
+    <a href="index.html" class="back-button">메인 페이지</a>
+
+    <!-- 관리자 페이지 콘텐츠 -->
+    <h2>관리자 페이지</h2>
+    <button class="add-menu-button" onclick="addMenuItem()">메뉴 추가</button>
+
+    <script>
+        // 메뉴 추가 기능 (예시)
+        function addMenuItem() {
+            alert("메뉴가 추가되었습니다!");
+            // 실제 메뉴 추가 로직을 여기에 추가할 수 있습니다.
+        }
+    </script>
+
+</body>
+</html>
